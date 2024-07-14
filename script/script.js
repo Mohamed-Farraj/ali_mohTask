@@ -14,13 +14,27 @@ async function callApi(link = ``){
     data = await res.json();
     console.log("response",data);
     
-    if(data.role == 'user' && data.state == true)
+    if(data.role == 'user')
     {
-        localStorage.setItem('userName',formData.username)
-        window.location.href = "./home.html"
+        if(data.state == true)
+        {
+            localStorage.setItem('userName',formData.username)
+            window.location.href = "./home.html"
+        }
+        else{
+            document.getElementById('stateMsg').classList.remove('d-none');
+        }
     }
-    else{
-        document.getElementById('stateMsg').classList.remove('d-none');
+    if(data.role == 'admin')
+    {
+        if(data.state == true)
+        {
+            localStorage.setItem('adminName',formData.username)
+            window.location.href = "./admin.html"
+        }
+        else{
+            document.getElementById('stateMsg').classList.remove('d-none');
+        }
     }
 }
 
