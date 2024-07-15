@@ -1,3 +1,13 @@
 html,body{
     min-height: 100vh;
 }
+form{
+    max-width: 500px;
+}
+.slider
+{
+    top: 50%; 
+    transform: translateY(-75%);
+    right: 1rem;
+    transition: all 1s;
+}

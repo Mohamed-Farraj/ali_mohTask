@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="style/all.min.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Quote</title>
+  </head>
+  <body class="overflow-x-hidden">
+    <div id="slider" class="slider d-none bg-body-tertiary position-fixed" style="width: fit-content;">
+        <button id="xbtn" class="rounded-circle btn btn-outline-danger"><i class="fa-solid fa-xmark"></i></button>
+        <form id="form" class="fs-2 p-3 text-center rounded-2 border-0">
+            <div class="mb-3">
+              <input
+                id="username"
+                type="text"
+                class="fs-3 form-control"
+                placeholder="username"
+              />
+            </div>
+
+            <div class="mb-3">
+              <input
+                id="email"
+                type="email"
+                class="fs-3 form-control"
+                placeholder="email"
+              />
+            </div>
+    
+            <div class="mb-3">
+              <div class="pass d-flex align-items-center position-relative">
+                <input placeholder="Password" id="password" type="password" class="fs-3 form-control" />
+              </div>
+            </div>
+
+            <div class="btn-group mb-3" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="btnradioadd" id="btnradio1add" autocomplete="off" value="user" checked="" >
+                <label class="btn btn-outline-primary" for="btnradio1add">user</label>
+              
+                <input type="radio" class="btn-check" name="btnradioadd" id="btnradio2add" value="user" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btnradio2add">admin</label>
+              
+              </div>
+    
+            <button
+              id="add"
+              type="submit"
+              class="fs-2 btn btn-primary w-50 m-auto d-block mb-3"
+            >
+              add
+            </button>
+            <div id="stateMsg" class="text-center text-danger d-none">wrong username or password</div>
+          </form>
+    </div>
+    <button style="width: 80px; height: 80px; bottom: 20px;left: 20px;" id="+btn" class="position-fixed rounded-circle btn btn-success"><i style="font-size: 50px;" class="fa-solid fa-plus"></i></button>
+    <div class="container py-5">
+
+        <div class="accordion d-flex flex-wrap" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item w-25">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+                  Accordion Item #1
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" style="">
+                <div class="accordion-body">
+                  <ul class="list-unstyled">
+                    <li><strong>username:</strong><input type="text" class="form-control" id="exampleFormControlInput1" value=""></li>
+                    <li><strong>email:</strong><input type="email" class="form-control" id="exampleFormControlInput1" value=""></li>
+                    <li class="mt-2">
+                        
+                        
+                        <strong>role:</strong>
+                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked="" >
+                        <label class="btn btn-outline-primary" for="btnradio1">user</label>
+                      
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btnradio2">admin</label>
+                      
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="groupOfBtns d-flex justify-content-between">
+                    <button type="button" class="btn btn-warning">Update</button>
+                    <button type="button" class="btn btn-danger">Delete</button>
+                  </div>
+                  <div id="updated" class="text-success mt-3 d-none">updated</div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+    </div>
+
+  <script src="script/all.min.js"></script>
+  <script src="script/bootstrap.bundle.min.js"></script>
+  <script src="script/admin.js"></script>
+  </body>
+</html>
